@@ -1,0 +1,607 @@
+/* Barra a lo ancho, pegada arriba */
+.navbar {
+  position: sticky;   /* o fixed si quieres que siempre esté visible */
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: #111111;           /* tu azul */
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+/* Contenedor interno centrado (opcional) */
+.navbar-inner {
+  max-width: 1200px;             /* cambia al ancho que prefieras */
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Barranavegacion{
+  position: absolute;  
+  right: 80px;
+  font-size: 20px;
+}
+
+/* Logo y menú */
+.navbar-logo {
+  height: 58px;
+  display: block;
+}
+
+.navbar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.navbar-list a, .navbar-list li {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* === HERO con imagen de fondo a pantalla completa de ancho === */
+
+.hero{
+  width: 100%;
+  min-height: 480px;                 /* ajusta a tu diseño */
+  background: url("https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/jojo.png") center/cover no-repeat;
+  display: flex;                      /* para alinear el contenido vertical */
+  
+}
+
+.hero__inner{
+  width: 80%;
+  max-width: 1200px;                  /* contenedor centrado */
+  margin: 0 auto;
+  padding: 48px 24px;                 /* separa la tarjeta del borde */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* === Tarjeta morada === */
+.hero__card{
+  background: #8B58ED;                /* morado de tu captura */
+  color: #fff;
+  width: 480px;                       /* como en Figma (≈ 500px) */
+  padding: 24px 28px;
+  border-radius: 16px;                /* borde redondeado */
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  text-align: left;
+}
+
+/* Eyebrow / etiqueta superior */
+.hero__eyebrow{
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .95;
+  margin-bottom: 10px;
+}
+
+/* Título grande en dos líneas */
+.hero__title{
+  margin: 0 0 14px 0;
+  font-weight: 800;
+  font-size: 42px;                    /* ajústalo si tu Figma tiene otro */
+  line-height: 1.05;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* Subtítulo */
+.hero__subtitle{
+  margin: 0 0 18px 0;
+  font-size: 15px;
+  opacity: .95;
+}
+
+/* Botón blanco */
+.hero__btn{
+  background: #ffffff;
+  color: #8B58ED;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease;
+}
+.hero__btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+
+/* === Responsive: móvil === */
+@media (max-width: 640px){
+  .hero{ min-height: 360px; }
+  .hero__card{
+    width: 100%;
+    max-width: 520px;
+  }
+  .hero__title{ font-size: 34px; }
+}
+
+/*     imageCard       */
+
+.imgcard{
+  width: 310px;                /* ajusta al tamaño que quieras */
+  height: 380px;
+  aspect-ratio: 3 / 4;         /* mismo “feeling” del mock */
+  border-radius: 24px;
+  overflow: hidden;            /* recorta la imagen en las esquinas */
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  background: #111;            /* por si tarda en cargar */
+}
+
+.imgcard > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* que llene sin deformarse */
+  display: block;
+  transform: translateZ(0);    /* evita borrosidad en algunos navegadores */
+}
+
+/* opcional: micro-interacción */
+.imgcard:hover img{
+  transform: scale(1.03);
+  transition: transform .25s ease;
+}
+
+/* ===== Sección ===== */
+.seccionProductos{
+  width: 100%;
+  background:#000000;
+  padding: 56px 24px ;
+}
+
+.seccionProductos__header{
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.seccionProductos__header h2{
+  margin:0;
+  color:#e9e9e9;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+
+.seccionProductos__verTodo{
+  padding:12px 28px;
+  border:none;
+  border-radius:24px;
+  background:#fff;
+  color:#7f55e9; /* morado */
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ===== Grid de cards ===== */
+.seccionProductos__grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);   /* 5 por fila como tu mock (ajusta en responsive) */
+  gap: 28px;
+}
+
+/* ===== Card ===== */
+.card{
+  background:transparent;
+  border-radius:24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* imagen */
+.card__imgWrap{
+  width: 220px;                 /* tamaño consistente */
+  aspect-ratio: 1 / 1.12;       /* alto similar al mock */
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  background:#0e0e0e;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+.card__imgWrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* badge "Oferta" */
+.card__badge{
+  position:absolute;
+  left:10px; top:10px;
+  padding:4px 10px;
+  background:#7f55e9;
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  border-radius:6px;
+  text-transform:uppercase;
+  overflow: hidden;
+}
+
+/* contenido */
+.card__content{
+  width: 220px;
+  text-align:center;
+  color:#eaeaea;
+  margin-top:10px;
+}
+
+.card__title{
+  display:block;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+
+.card__price{
+  margin:6px 0 10px;
+  color:#c9c9c9;
+  font-weight:600;
+}
+
+/* botón */
+.card__btn{
+  padding:8px 22px;
+  border:none;
+  border-radius:18px;
+  background:#7f55e9;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px){
+  .seccionProductos__grid{ grid-template-columns: repeat(4, 1fr); }
+  .SeccionOfertas-products-container figure{ width: 300px; }
+  .ofertas-Card{ width: 460px; }
+}
+@media (max-width: 900px){
+  .seccionProductos__grid{ grid-template-columns: repeat(3, 1fr); }
+  .SeccionOfertas-products-container{
+    gap: 16px;
+  }
+  .SeccionOfertas-products-container figure{ width: 220px; }
+  .ofertas-Card{
+    width: 90%;
+    top: 55%;
+    transform: translate(-50%, -40%);
+  }
+}
+@media (max-width: 640px){
+  .seccionProductos__grid{ grid-template-columns: repeat(2, 1fr); }
+  .seccionProductos__header{ flex-direction:column; align-items:flex-start; }
+}
+
+/* ====== Seccion Ofertas ========  */
+
+.SeccionOfertas{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background:#000000;
+  padding: 72px 24px 140px;
+  
+}
+/* fila de 3 imágenes centradas */
+.SeccionOfertas-products-container{
+  max-width: 1200px;
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.SeccionOfertas-products-container figure{
+  width: 340px;                 /* ajusta al tamaño del mock */
+  aspect-ratio: 1 / 1.1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+.SeccionOfertas-products-container img{
+  width: 100%; height: 100%; object-fit: cover; display:block;
+}
+
+
+.ofertas-Card{
+  position: absolute;
+  left: 50%;
+  top: 40%;                     /* verticalmente por el centro del bloque de imágenes */
+  transform: translate(-50%, -30%); /* súbela un poco (ajusta -30% a gusto) */
+  z-index: 2;
+
+  background: #8B58ED;
+  color: #fff;
+  width: 520px;
+  padding: 28px 36px;
+  border-radius: 16px;
+  box-shadow: 0 16px 32px rgba(0,0,0,.25);
+  text-align: center;
+}
+
+.oferta__eyebrow{
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .95;
+  margin-bottom: 12px;
+}
+
+.oferta__titulo{
+  margin: 0 0 16px 0;
+  font-weight: 900;
+  font-size: 48px;                    /* ajústalo si tu Figma tiene otro */
+  line-height: 1.05;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.oferta__btn{
+  background: #ffffff;
+  color: #8B58ED;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease;
+}
+
+/* ========= SeccionHeaderTitulo ======= */
+
+.SecHeaderTitulo-contenedor{
+  width: 100%;
+  height: 10%;
+  padding: 20px 30px;
+}
+
+.Header-Titulo{
+  color: #ffffff;
+  text-align: left;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+
+}
+
+/* SeccionCategorias */
+
+.SeccionCategorias{
+  width: 100%;
+  height: 650px;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  padding: 72px 24px 140px;
+  gap: 20px;
+}
+
+.categorias-contenedor{
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+/* Overlay */
+.imgcard--overlay{
+  position: relative;
+}
+
+.imgcard--overlay::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 95%);
+}
+
+.imgcard__caption{
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  line-height: .95;
+}
+
+.imgcard__title{
+  display:block;
+  color:#fff;
+  font-weight: 900;
+  font-size: 44px;             /* ajusta al look */
+  letter-spacing: .04em;
+  
+}
+
+/* Seccion Publicidad */
+
+.SeccionPublicidad{
+  background-image: url("https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/banner5.jpg");
+  width: 100%;
+  height: 750px;
+  padding: 72px 24px 140px;
+}
+.SeccionPublicidad-title{
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  font-size: 48px;                    /* ajústalo si tu Figma tiene otro */
+  line-height: 1.05;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+}
+.SeccionPublicidad-text{
+  padding: 40px;
+}
+
+/* Seccion Contacto */
+
+.SeccionContacto{
+  position: relative;
+  min-height: 420px;
+  /* degradado vertical (arriba negro → abajo gris) */
+  background: linear-gradient(to bottom, #000 10%, #3b3b3b 60%, #747373 90%);
+}
+
+.SeccionContacto::before {
+  /* viñeta: oscurece bordes superior, inferior y laterales */
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  
+}
+
+.SeccionContacto-title{
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 48px;                    /* ajústalo si tu Figma tiene otro */
+  line-height: 1.05;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+}
+
+.SeccionContacto-text{
+  padding: 10px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.SeccionContacto-label{
+  font-weight: 600;
+  
+}
+
+.SeccionContacto-input{
+  width: 400px;
+  padding: 15px 5px;
+  background-color: transparent;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 8px 8px 0px 0px;
+  border: #e9e9e9 solid 3px;
+  color: #fff;
+}
+
+.SeccionContacto-btn{
+  width: 400px;
+  padding: 15px 5px;
+  font-size: 18px;
+  border-radius: 0px 0px 8px 8px;
+  border: #e9e9e9 solid 3px;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Footer */
+
+.footer{
+  width: 100%;
+  height: 500px;
+  background: #000;
+  color: #eaeaea;
+  padding: 48px 24px;
+}
+
+.footer__inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr; /* logo + 3 columnas */
+  gap: 40px 64px;
+  align-items: start;
+}
+
+/* Brand (logo grande) */
+.footer__brand img{
+  width: 100%;
+  max-width: 220px;     /* tamaño cercano al figma (≈227px) */
+  height: auto;
+  display: block;
+}
+
+.footer__col h3{
+  margin: 0 0 40px;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+.footer__col ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;     /* sin bullets */
+  display: grid;
+  gap: 30px;            /* separación entre ítems */
+}
+
+.footer__col li{
+  color: #d2d2d2;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Opcional: sutil separación superior/inferior para integrarlo mejor */
+.footer{
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .footer__inner{
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+  }
+  .footer__brand{
+    grid-column: 1 / -1;  /* logo ocupa ancho completo arriba */
+  }
+}
+@media (max-width: 560px){
+  .footer__inner{
+    grid-template-columns: 1fr;  /* columnas apiladas */
+    gap: 28px;
+  }
+  .footer{
+    padding: 36px 20px;
+  }
+}
+
+/* ====== Componentes reutilizables */
+
+.btn__compra{
+  background: #ffffff;
+  color: #8B58ED;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease;
+}
