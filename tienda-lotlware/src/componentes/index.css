@@ -444,7 +444,7 @@
 /* Seccion Publicidad */
 
 .SeccionPublicidad{
-  background-image: url("https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/banner5.jpg");
+  background: url("https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/banner5.jpg") center/cover no-repeat ;
   width: 100%;
   height: 750px;
   padding: 72px 24px 140px;
