@@ -1,45 +1,63 @@
+import CardProducto from './CardProducto';
 import HeaderTituloBtn from './HeaderTituloBtn';
 import './index.css';
-const productos =[
-    {
-        id: 1,
-        name:"consola RX",
-        price:45.22,
-        urlImage:"https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/consola.jpg"
-    },{
-        id: 2,
-        name:"Gaming mouse",
-        price:28.99,
-        urlImage:"https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/Gaming%20mouse.jfif"
-    },{
-        id: 3,
-        name:"Gaming mouse",
-        price:28.99,
-        urlImage:"https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/Gaming%20mouse.jfif"
-    }
-]
 
-export default function SeccionProductos(){
+
+export interface Producto{
+    
+    id:number,
+    name:string,
+    urlImage:string,
+    price:number
+    
+}
+
+type SeccionProductosProps= {
+    titulo?:string;
+    textoBoton?: string;
+    productos:Producto[];
+    isLoading:boolean;
+    emptyText?:string;
+}
+
+export default function SeccionProductos({
+    titulo= 'Actualiza tu equipo',
+    textoBoton = 'Ver todo',    
+    productos = [],
+    isLoading = false,
+    emptyText = 'No hayaz productos disponibles'
+}: SeccionProductosProps){
 
     return(
         <section className="seccionProductos">
-            <HeaderTituloBtn titulo='Actualiza tu equipo' titulobtn='ver todo'/>
+            <HeaderTituloBtn 
+                titulo={titulo}
+                titulobtn={textoBoton}
+            />
             
             <article className="seccionProductos__grid">
-                {productos.map((p) => (
-                    <figure className="card" key={p.id}>
-                        <div className="card__imgWrap">
-                            <img src={p.urlImage} alt={p.name} />
-                            <span  className="card__badge">Oferta</span>
-                        </div>
+                { isLoading ? (
+                        Array.from({length: 3}).map((_, i)=> (
+                            <div className='card skeleton' key={`skeleton-${i}`}/>
+                        ))
+                    ): productos.length > 0 ? (
+                        
+                        productos.map((p) => (
+                            <CardProducto 
+                                id={p.id}
+                                name={p.name}
+                                urlImage={p.urlImage}
+                                price={p.price} 
+                            />
+                        ))
 
-                        <figcaption className="card__content">
-                            <span className="card__title">{p.name}</span>
-                            <p className="card__price">${p.price.toLocaleString("es-MX", { minimumFractionDigits: 2 })}</p>
-                            <button className="card__btn">Agregar</button>
-                        </figcaption>
-                    </figure>
-                ))}
+                    ):(
+                        <p className='seccionProductos_empty'>{emptyText}</p>
+                    )
+
+                }
+
+                
             </article>
         </section>
     );

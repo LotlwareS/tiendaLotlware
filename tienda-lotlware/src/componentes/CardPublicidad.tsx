@@ -17,7 +17,7 @@ export default function CardPublicidad({textoheader,title,subtitle}:CardPublicid
             </h1>
             <p className="hero__subtitle">{subtitle}</p>
 
-            <BtnCompra name='Comprar Hora'/>                        
+            <BtnCompra name='Comprar Ahora'/>                        
         </div>
         
     );
