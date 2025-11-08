@@ -8,9 +8,9 @@ type HeaderTituloBtnProps = {
 export default function HeaderTituloBtn({titulo, titulobtn}: HeaderTituloBtnProps){
 
     return(
-        <div className="seccionProductos__header">
+        <div className="TituloBtn__header">
             <h1>{titulo}</h1>
-            <button className="seccionProductos__verTodo">{titulobtn}</button>
+            <button className="TituloBtn__Button">{titulobtn}</button>
         </div>
     );
 }

@@ -10,12 +10,12 @@ type CardPublicidadProps = {
 export default function CardPublicidad({textoheader,title,subtitle}:CardPublicidadProps){
     return(
         
-        <div className="hero__card">
-            <span className="hero__eyebrow">{textoheader}</span>
-            <h1 className="hero__title">
+        <div className="cuadroTexto1__card">
+            <span className="cuadroTexto1__eyebrow">{textoheader}</span>
+            <h1 className="cuadroTexto1__title">
                 {title}
             </h1>
-            <p className="hero__subtitle">{subtitle}</p>
+            <p className="cuadroTexto1__subtitle">{subtitle}</p>
 
             <BtnCompra name='Comprar Ahora'/>                        
         </div>
