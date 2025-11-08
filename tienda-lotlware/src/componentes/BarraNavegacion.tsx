@@ -1,6 +1,7 @@
 import './index.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Link } from 'react-router-dom';
 
 
 export default function BarraNavegacion(){
@@ -9,16 +10,16 @@ export default function BarraNavegacion(){
         <header className="navbar">
             <div className="navbar-inner">
                 <img
-                className="navbar-logo"
-                src="https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/Logo_tienda_lotlware.png"
-                alt="logo de la tienda"
+                    className="navbar-logo"
+                    src="https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/Logo_tienda_lotlware.png"
+                    alt="logo de la tienda"
                 />
 
                 <nav aria-label="principal" className='Barranavegacion'>
                     <ul className="navbar-list">
-                        <li>Productos</li>
+                        <Link to="/Productos">Productos</Link>
                         <li>Oferta</li>
-                        <li>Contáctanos</li>
+                        <Link to="/Contacto">Contáctanos</Link>
                         <li><AccountCircleIcon aria-label="Cuenta" /></li>
                         <li><AddShoppingCartIcon aria-label="Carrito" /></li>
                     </ul>
