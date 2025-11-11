@@ -1,4 +1,4 @@
-
+//import styles from "./CardProducto.module.css"
 type CardProductoProps = {
     id:number;
     name:string;

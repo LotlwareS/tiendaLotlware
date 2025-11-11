@@ -1,0 +1,47 @@
+/* Barra a lo ancho, pegada arriba */
+.navbar {
+  position: sticky;   /* o fixed si quieres que siempre esté visible */
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: #111111;           /* tu azul */
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+/* Contenedor interno centrado (opcional) */
+.navbar_inner {
+  max-width: 1200px;             /* cambia al ancho que prefieras */
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Barranavegacion{
+  position: absolute;  
+  right: 80px;
+  font-size: 20px;
+}
+
+/* Logo y menú */
+.navbar_logo {
+  height: 58px;
+  display: block;
+}
+
+.navbar_list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.navbar-list a, .navbar-list li {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}

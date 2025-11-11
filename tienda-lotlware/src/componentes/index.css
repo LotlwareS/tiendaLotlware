@@ -1,50 +1,4 @@
-/* Barra a lo ancho, pegada arriba */
-.navbar {
-  position: sticky;   /* o fixed si quieres que siempre esté visible */
-  top: 0;
-  z-index: 50;
-  width: 100%;
-  background: #111111;           /* tu azul */
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,.08);
-}
 
-/* Contenedor interno centrado (opcional) */
-.navbar-inner {
-  max-width: 1200px;             /* cambia al ancho que prefieras */
-  margin: 0 auto;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.Barranavegacion{
-  position: absolute;  
-  right: 80px;
-  font-size: 20px;
-}
-
-/* Logo y menú */
-.navbar-logo {
-  height: 58px;
-  display: block;
-}
-
-.navbar-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.navbar-list a, .navbar-list li {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 500;
-}
 
 
 /* === HERO con imagen de fondo a pantalla completa de ancho === */
@@ -67,83 +21,8 @@
   justify-content: flex-end;
 }
 
-    /* ============= Tarjeta morada 1 ================== */
-.cuadroTexto1__card{
-  background: #8B58ED;                /* morado de tu captura */
-  color: #fff;
-  width: 480px;                       /* como en Figma (≈ 500px) */
-  padding: 24px 28px;
-  border-radius: 16px;                /* borde redondeado */
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
-  text-align: left;
-}
-
-/* Eyebrow / etiqueta superior */
-.cuadroTexto1__eyebrow{
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  opacity: .95;
-  margin-bottom: 10px;
-}
-
-/* Título grande en dos líneas */
-.cuadroTexto1__title{
-  margin: 0 0 14px 0;
-  font-weight: 800;
-  font-size: 42px;                    /* ajústalo si tu Figma tiene otro */
-  line-height: 1.05;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
-/* Subtítulo */
-.cuadroTexto1__subtitle{
-  margin: 0 0 18px 0;
-  font-size: 15px;
-  opacity: .95;
-}
 
 
-
-
-/* === Responsive: móvil === */
-@media (max-width: 640px){
-  .hero{ min-height: 360px; }
-  .hero__card{
-    width: 100%;
-    max-width: 520px;
-  }
-  .hero__title{ font-size: 34px; }
-}
-
-/* =================    imageCard    =====================   */
-
-.imgcard{
-  width: 310px;                /* ajusta al tamaño que quieras */
-  height: 380px;
-  aspect-ratio: 3 / 4;         /* mismo “feeling” del mock */
-  border-radius: 24px;
-  overflow: hidden;            /* recorta la imagen en las esquinas */
-  box-shadow: 0 12px 30px rgba(0,0,0,.35);
-  background: #111;            /* por si tarda en cargar */
-}
-
-.imgcard > img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;           /* que llene sin deformarse */
-  display: block;
-  transform: translateZ(0);    /* evita borrosidad en algunos navegadores */
-}
-
-/* opcional: micro-interacción */
-.imgcard:hover img{
-  transform: scale(1.03);
-  transition: transform .25s ease;
-}
 
 
 /* ============================= Sección ======================== */
@@ -353,16 +232,7 @@
   text-transform: uppercase;
 }
 
-.oferta__btn{
-  background: #ffffff;
-  color: #8B58ED;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform .06s ease, box-shadow .2s ease;
-}
+
 
 /* ========= SeccionHeaderTitulo ======= */
 
@@ -399,6 +269,23 @@
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+.imgcard{
+  width: 310px;                /* ajusta al tamaño que quieras */
+  height: 380px;
+  aspect-ratio: 3 / 4;         /* mismo “feeling” del mock */
+  border-radius: 24px;
+  overflow: hidden;            /* recorta la imagen en las esquinas */
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  background: #111;            /* por si tarda en cargar */
+}
+
+.imgcard > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* que llene sin deformarse */
+  display: block;
+  transform: translateZ(0);    /* evita borrosidad en algunos navegadores */
 }
 
 /* Overlay */

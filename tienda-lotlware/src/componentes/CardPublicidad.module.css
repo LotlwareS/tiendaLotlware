@@ -1,0 +1,51 @@
+/* ============= Tarjeta morada 1 ================== */
+.cuadroTexto1__card{
+  background: #8B58ED;                /* morado de tu captura */
+  color: #fff;
+  width: 480px;                       /* como en Figma (≈ 500px) */
+  padding: 24px 28px;
+  border-radius: 16px;                /* borde redondeado */
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  text-align: left;
+}
+
+/* Eyebrow / etiqueta superior */
+.cuadroTexto1__eyebrow{
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .95;
+  margin-bottom: 10px;
+}
+
+/* Título grande en dos líneas */
+.cuadroTexto1__title{
+  margin: 0 0 14px 0;
+  font-weight: 800;
+  font-size: 42px;                    /* ajústalo si tu Figma tiene otro */
+  line-height: 1.05;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* Subtítulo */
+.cuadroTexto1__subtitle{
+  margin: 0 0 18px 0;
+  font-size: 15px;
+  opacity: .95;
+}
+
+
+
+
+/* === Responsive: móvil === */
+@media (max-width: 640px){
+  .hero{ min-height: 360px; }
+  .hero__card{
+    width: 100%;
+    max-width: 520px;
+  }
+  .hero__title{ font-size: 34px; }
+}

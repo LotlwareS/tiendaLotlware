@@ -1,5 +1,5 @@
 import './index.css';
-
+import styles from "./CardImage.module.css"
 type CardImageProps = {
     src:string;
     alt:string
@@ -9,7 +9,7 @@ export default function CardImage({src, alt}:CardImageProps){
 
     return(
         <>
-            <figure className="imgcard">
+            <figure className={styles.imgcard}>
                 <img
                     src={src}
                     alt={alt}

@@ -1,3 +1,4 @@
+import styles from "./BtnCompra.module.css"
 
 type BtnCompraProps = {
     name:string;
@@ -6,7 +7,7 @@ type BtnCompraProps = {
 export default function BtnCompra({name}:BtnCompraProps){
 
     return(
-        <button className="oferta__btn" type="button">
+        <button className={styles.oferta__btn} type="button">
             {name}
         </button>
     );

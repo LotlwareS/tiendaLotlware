@@ -1,0 +1,17 @@
+.seccionBienvenida{
+  width: 100%;
+  min-height: 480px;                 /* ajusta a tu diseño */
+  background: url("https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/jojo.png") center/cover no-repeat;
+  display: flex;                      /* para alinear el contenido vertical */
+  
+}
+
+.seccionBienvenida__inner{
+  width: 80%;
+  max-width: 1200px;                  /* contenedor centrado */
+  margin: 0 auto;
+  padding: 48px 24px;                 /* separa la tarjeta del borde */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
