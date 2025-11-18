@@ -1,0 +1,129 @@
+/* .BannerHeader{
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 10px 50px; 
+}
+
+.container{
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    gap: 35em;
+}
+
+.select__btn{
+    color: #fff;
+    background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px 40px 10px 0px;
+} */
+
+
+.BannerHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 28px;
+  padding: 10px 50px;
+}
+
+/* === Fila 1: título + select a la derecha === */
+.headerRow{
+  display: flex;
+  align-items: center;
+  
+  gap: 24px;
+}
+
+/* Título como en Figma */
+.headerRow h1{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+/* Fila 2: “Filtrar por” + select (opcional) */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* === Select con borde blanco y caret personalizado === */
+.selectWrap{
+  position: relative;
+  display: inline-flex;
+}
+
+
+
+/* Estilo del <select> (borde blanco, fondo negro transparente) */
+.select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+
+  border-radius: 6px;
+  padding: 10px 40px 10px 16px; /* espacio para el caret */
+  cursor: pointer;
+}
+
+/* estados */
+.select:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.2);
+}
+.select:disabled{
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* Responsive: que el select ocupe el ancho en móvil */
+@media (max-width: 768px){
+  .BannerHeader{ padding: 10px 20px; }
+  .headerRow{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .selectWrap{ width: 100%; }
+  .select{ width: 100%; }
+  .container{ gap: 16px; font-size: 18px; }
+}
+
+/* caret SVG blanco como en Figma */
+.selectWrap::after{
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 10px;
+  height: 6px;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;  
+  
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'>\
+    <path d='M1 1l4 4 4-4' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>\
+  </svg>");
+}

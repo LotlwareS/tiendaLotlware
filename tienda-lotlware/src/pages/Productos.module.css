@@ -1,0 +1,27 @@
+.Productos{
+    background-color: black ;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 100%;
+    padding: 10px 10px 10px 30px ;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.list__continer{
+    width:30% ;
+}
+
+.container__Products{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}

@@ -64,11 +64,12 @@
   max-width: 1200px;
   margin: 0 auto;
   display:grid;
-  grid-template-columns: repeat(5, 1fr);   /* 5 por fila como tu mock (ajusta en responsive) */
+  grid-template-columns: repeat(3, 1fr);   /* 5 por fila como tu mock (ajusta en responsive) */
   gap: 28px;
 }
 
 /* ===== Card ===== */
+
 .card{
   background:transparent;
   border-radius:24px;
