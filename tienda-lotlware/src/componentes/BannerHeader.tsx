@@ -12,19 +12,18 @@ export default function BannerHeader(){
         </div>
 
       {/* Fila 2: Filtrar por (opcional) */}
-        <div className={styles.container}>
-            <span>Filtrar por</span>
-            <div className={styles.selectWrap}>
-                <select className={styles.select} defaultValue="" >                
-                    <option value="" disabled>
-                    Ordenar por
-                    </option>
-                    <option value="relevancia">Ofertas</option>
-                    <option value="precio_asc">Juegos</option>
-                    <option value="precio_desc">Consolas</option>
-                    <option value="novedades">Accesorios</option>
-                </select>
-            </div>
+        <div className={styles.container}>            
+          <div className={styles.selectWrap}>
+            <select className={styles.select} defaultValue="" >                
+              <option value="" disabled>
+              Ordenar por
+              </option>
+              <option value="relevancia">Ofertas</option>
+              <option value="precio_asc">Juegos</option>
+              <option value="precio_desc">Consolas</option>
+              <option value="novedades">Accesorios</option>
+            </select>
+          </div>
         </div>
     </div>
   );

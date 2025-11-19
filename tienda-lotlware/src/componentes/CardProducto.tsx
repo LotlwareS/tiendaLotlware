@@ -4,6 +4,7 @@ type CardProductoProps = {
     name:string;
     urlImage:string;
     price:number;
+    category?:string
 }
 
 export default function CardProducto({id, name, urlImage,price}:CardProductoProps){

@@ -1,0 +1,99 @@
+.sidebar{
+  position: sticky;
+  top: 96px;
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 16px 18px;
+  min-width: 260px;
+}
+
+.title{
+  color:#fff;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  letter-spacing:.5px;
+}
+
+.hr{
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  margin: 10px 0 14px 0;
+}
+
+.list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 6px 0;
+  display: grid;
+  gap: 4px;
+}
+
+.item{
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .05s ease;
+}
+.item:hover{ background: rgba(255,255,255,.06); color: #fff; }
+.item:active{ transform: scale(.99); }
+.itemActive{
+  background: rgba(117,101,255,.18);
+  color:#fff;
+  outline: 1px solid rgba(117,101,255,.35);
+}
+
+.priceHead{
+  display:flex; align-items:center; justify-content:space-between;
+  color:#e5e7eb; font-weight:700; margin: 4px 0 8px 0;
+}
+.minus{ color:#9ca3af; }
+
+.rangeWrap{
+  position: relative;
+  height: 28px;
+  display: grid;
+  align-items: center;
+  margin: 6px 2px 0 2px;
+}
+.range{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,.12) 0 var(--rangeStart, 0%),
+    #7c3aed var(--rangeStart, 0%) var(--rangeEnd, 100%),
+    rgba(255,255,255,.12) var(--rangeEnd, 100%) 100%);
+  outline: none;
+  border-radius: 999px;
+  position: absolute;
+  pointer-events: none; /* ambos en capa, solo el thumb captura */
+}
+.range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; border: 2px solid #7c3aed;
+}
+.range::-moz-range-thumb{
+  pointer-events: auto;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; border: 2px solid #7c3aed;
+}
+.rangeMin{ z-index: 2; }
+.rangeMax{ z-index: 3; }
+
+.priceLabels{
+  display:flex; justify-content:space-between; gap:12px;
+  color:#9ca3af; font-size:12px; margin-top:8px;
+}
