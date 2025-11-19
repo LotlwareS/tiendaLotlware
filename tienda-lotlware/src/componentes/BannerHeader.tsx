@@ -12,7 +12,7 @@ export default function BannerHeader(){
         </div>
 
       {/* Fila 2: Filtrar por (opcional) */}
-        <div className={styles.container}>            
+        <div className={styles.container} >            
           <div className={styles.selectWrap}>
             <select className={styles.select} defaultValue="" >                
               <option value="" disabled>
