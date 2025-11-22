@@ -42,7 +42,7 @@ const AcesoriosPc = [
         price:56.2,
         urlImage:"https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/Jogue%20com%20esse.jpg"
     },{
-        id:2,
+        id:3,
         name:"Control PSP5",
         price:56.2,
         urlImage:"https://pub-59ece35300204c2d91a5977706ecf479.r2.dev/The%20%20Black%20controller.jpg"

@@ -44,6 +44,7 @@ export default function SeccionProductos({
                         
                         productos.map((p) => (
                             <CardProducto 
+                                key={p.id}
                                 id={p.id}
                                 name={p.name}
                                 urlImage={p.urlImage}

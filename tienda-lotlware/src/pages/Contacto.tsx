@@ -51,7 +51,7 @@ export default function Contacto(){
                         <div className={styles.inputsContainer}>
                             <label htmlFor="fMsg" className={styles.lblTexarea}>Dejanos un mensaje</label>
                             <textarea id="fMsg"></textarea>
-                            <button type="submit">Enviar</button>
+                            <button className={styles.btnEnviar} type="submit">Enviar</button>
                         </div>
 
                     </form>

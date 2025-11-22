@@ -137,7 +137,7 @@ textarea{
     text-align: left;
 }
 
-button {
+.btnEnviarutton,.btnEnviar {
   margin-top: 4px;
   width: 100%;
   padding: 12px;

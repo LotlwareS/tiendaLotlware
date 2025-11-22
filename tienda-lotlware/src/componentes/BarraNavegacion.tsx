@@ -18,9 +18,9 @@ export default function BarraNavegacion(){
 
                 <nav aria-label="principal" className={styles.Barranavegacion}>
                     <ul className={styles.navbar_list}>
-                        <Link to="/Productos">Productos</Link>
+                        <Link className={styles.listLink} to="/Productos">Productos</Link>
                         <li>Oferta</li>
-                        <Link to="/Contacto">Contáctanos</Link>
+                        <Link className={styles.listLink} to="/Contacto">Contáctanos</Link>
                         <li><AccountCircleIcon aria-label="Cuenta" /></li>
                         <li><AddShoppingCartIcon aria-label="Carrito" /></li>
                     </ul>
